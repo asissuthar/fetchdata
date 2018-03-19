@@ -1,0 +1,40 @@
+{
+  "name": "fetchdata",
+  "description": "cli app for fetching data from api.",
+  "license": "MIT",
+  "main": "index.js",
+  "version": "0.0.1",
+  "bin": {
+    "fetching": "./bin/fetchdata"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/asissuthar/fetchdata.git"
+  },
+  "dependencies": {
+    "axios": "^0.17.1",
+    "commander": "^2.14.1",
+    "jsonpath": "^1.0.0",
+    "word-wrap": "^1.2.3",
+    "xmldom": "^0.1.27",
+    "xpath": "0.0.27"
+  },
+  "bugs": {
+    "url": "https://github.com/asissuthar/fetchdata/issues"
+  },
+  "homepage": "https://github.com/asissuthar/fetchdata#readme",
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "json",
+    "jsonpath",
+    "xml",
+    "xmlpath",
+    "api",
+    "rss",
+    "fetch"
+  ],
+  "author": "Ashish Suthar <asissuthar@gmail.com> (http://asissuthar.github.io)"
+}

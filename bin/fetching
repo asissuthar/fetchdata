@@ -1,0 +1,24 @@
+#!/usr/bin/env node
+'use strict';
+
+const commander = require('commander')
+const fetchdata = require('../')
+
+commander
+  .version('0.1.0')
+  .option('-u, --url <value>', 'url')
+  .option('-q, --query <value>', 'query')
+  .option('-s, --separator [value]', 'separator', '\n')
+  .option('-p, --prefix [value]', 'prefix', '')
+  .option('-r, --wrap', 'wrap')
+  .option('-w, --width [value]', 'width', 40)
+  .option('-t, --type [value]', 'type', 'json')
+  .parse(process.argv)
+
+fetchdata(commander)
+  .then(data => {
+    process.stdout.write(data)
+  })
+  .catch(err => {
+    console.log(err)
+  })
