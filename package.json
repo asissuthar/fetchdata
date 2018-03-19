@@ -1,11 +1,11 @@
 {
-  "name": "fetchdata",
+  "name": "@asissuthar/fetchdata",
   "description": "cli app for fetching data from api.",
   "license": "MIT",
   "main": "index.js",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "bin": {
-    "fetching": "./bin/fetchdata"
+    "fetchdata": "./bin/fetchdata"
   },
   "repository": {
     "type": "git",
