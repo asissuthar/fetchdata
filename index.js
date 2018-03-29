@@ -32,7 +32,7 @@ const find = (items, value, change) => {
     return items
   }
   let regex = RegExp(value, 'g')
-  return items.map(item => item.replace(RegExp(value, 'g'), change))
+  return items.map(item => item.replace(regex, change))
 }
 const resize = (items, _wrap, _width) => _wrap ? items.map(item => wrap(item, { width: _width, indent: '' })) : items
 const join = (items, value) => items.join(value.replace(/\\n/g, '\n'))
