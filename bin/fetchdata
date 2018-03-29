@@ -15,6 +15,7 @@ commander
   .option('-t, --type [value]', 'type', 'json')
   .option('-f, --find <regex>', 'find')
   .option('-c, --change <value>', 'change', '\n')
+  .option('-k, --keep <regex>', 'keep')
   .parse(process.argv)
 
 fetchdata(commander)
