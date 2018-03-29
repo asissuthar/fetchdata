@@ -20,6 +20,7 @@ const xml = (data, path) => xpath
 const source = (data, query, type) => type === 'json' ? json(data, query) : xml(data, query)
 const clean = (items)  => items.filter(item => item != null)
 const prefix = (items, value) => items.map(item => `${value}${item}`)
+const find = (items, value, change) => value ? items.map(item => item.replace(new RegExp(value, 'g'), change)) : items
 const resize = (items, _wrap, _width) => _wrap ? items.map(item => wrap(item, { width: _width, indent: '' })) : items
 const join = (items, value) => items.join(value.replace(/\\n/g, '\n'))
 const plain = (data, type) => type === 'json' ? JSON.stringify(data) : data
@@ -31,6 +32,7 @@ module.exports = (options) => {
       .then(data => source(data, options.query, options.type))
       .then(items => clean(items))
       .then(items => prefix(items, options.prefix))
+      .then(items => find(items, options.find, options.change))
       .then(items => resize(items, options.wrap, options.width))
       .then(items => join(items, options.separator))
   } else {
